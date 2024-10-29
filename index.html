@@ -1,0 +1,764 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/test.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <title>Tivian Goal Setting</title>
+</head>
+
+<body>
+
+<!-- the header contains the company logo and music on/off switch -->
+<header>
+  <img class="logo" src="img/logo/logo_tivian_default.png" alt="Tivian Logo" />
+  <div>
+      <span id="displayName"></span>
+      <button id="bgMusic" class="btnMusic"><img src="img/icons/icon_music_01.png" alt="music icon" /></button>
+  </div>
+  
+</header>
+
+<!-- background image to be turned on/off -->
+<img class="bgMain" src="img/bg/logo_tivian_bg.png" alt="Tivian Logo BG"/>
+
+<!-- next arrow to be turned on/off and repositioned -->
+<button class="btnArrow" id="btnArrVidStop">
+  <img src="img/icons/icon_arrowRight_01.png" alt="right arrow" />
+</button>
+
+<!-- timeline (progress bar) -->
+<div class="wrapperProgBar">
+  <button id="progBarBack">
+    <img src="img/icons/icon_pointerLeft.png" alt="pointer">
+  </button>
+  <div class="progBar">
+    <div class="progBarHi"></div>
+    <img class="iconBarCheck" src="img/icons/icon_check_01.png" alt="checkmark" />
+    <img class="iconBarCheck" src="img/icons/icon_check_01.png" alt="checkmark" />
+    <img class="iconBarCheck" src="img/icons/icon_check_01.png" alt="checkmark" />
+  </div>
+  <button id="progBarNext">
+      <img src="img/icons/icon_pointerLeft.png" alt="pointer">
+  </button>
+</div>
+
+
+<!-- the actual content starts here -->
+
+<section class="wrapperPage" id="p1">
+  <h1>Oh, hey there!</h1>
+  <h1>Let's talk about <b>goals.</b></h1>
+</section>
+
+<section class="wrapperPage" id="p2">
+  <h1>Today you are going to:</h1>
+  <div class="wrapperContent">
+    <div class="wrapperIconText">
+      <img src="img/icons/icon_target_01.png" class="icon" alt="target and checkmark icon" />
+      <h2 class="wrapped">set a personal goal</h2>
+    </div>
+    <div class="wrapperIconText">
+      <img src="img/icons/icon_ranking_01.png" class="icon" alt="bar graph and checkmark icon" />
+      <h2 class="wrapped">identify skills <br> to grow</h2>
+    </div>
+    <div class="wrapperIconText">
+      <img src="img/icons/icon_calendarCheck_01.png" class="icon" alt="calendar and checkmark icon" />
+      <h2 class="wrapped">establish a <br> check-in schedule</h2>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperPage" id="p3">
+  <div class="wrapperContent">
+    <div class="contentCard">
+      <h2>
+        <span class="companyName">
+            Tivian
+        </span> has goals.</h2>
+      <p id="companyGoal">Produce enterprise-quality work.</p>
+    </div>
+    <div class="wrapperVideo">
+      <video controls="controls" class="videoWin" id="wrpVideo_1" src="mp4/What Is Goal Setting.mp4"></video>
+      <h3>What is Goal Setting? Video</h3>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperPage" id="p4">
+  <h1>But for now, let's focus on you.</h1>
+  <div class="wrapperContent">
+    <div class="contentBox">
+      <label for="name">What's your name?</label>
+      <input type="text" class="inputPsn" id="name"></input>
+      <label for="department">What department are you in?</label>
+      <select name="Department" id="department" class="inputDd">
+        <option value="your department">Select...</option>
+        <option value="Studios/Solutions">Studios/Solutions</option>
+        <option value="Product/Engineering">Product/Engineering</option>
+        <option value="Sales/Marketing">Sales/Marketing</option>
+        <option value="Finance/HR">Finance/HR</option>
+      </select>
+    </div>
+    <div class="contentBox">
+      <label for="role">And what's your role in
+        <span id="dptDisplay">your department</span>?
+      </label>
+      <input type="text" id="role" class="inputPsn"></input>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperPage" id="p5">
+  <h2>
+    <span class="companyName">
+        Tivian</span>'s goal includes several focus areas.
+  Which one do you see you and your department in?</h2>
+  <div class="wrapperContent">
+    <div class="contentCard" id="focusCard_1">
+      <img src="img/icons/icon_searchOne_02.png" class="icon" id="focus_1" alt="search icon one" />
+      <p class="focusOne" id="focusOne_color" type="text">Fully capture client brand across visuals, 
+        content, and communications</p>
+    </div>
+    <div class="contentCard" id="focusCard_2">
+      <img src="img/icons/icon_searchTwo_02.png" class="icon" id="focus_2" alt="search icon two" />
+      <p class="focusTwo" id="focusTwo_color">Establish end-to-end consistent internal 
+        communications and set consistent external expectations</p>
+    </div>
+    <div class="contentCard" id="focusCard_3">
+      <img src="img/icons/icon_searchThree_02.png" class="icon" id="focus_3" alt="search icon three" />
+      <p class="focusThree" id="focusThree_color">Set ourselves as the leader in employee 
+        communications and embody that internally</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperPage" id="p6">
+  <div class="contentCard selectedCard" id="focusArea">
+    <img src="img/icons/icon_searchTwo_01.png" class="icon" id="focusAreaIcon_1" alt="search icon two" />
+    <p id="faTextOne" contenteditable="true">Establish end-to-end consistent internal 
+      communications and set consistent external expectations</p>
+  </div>
+  <div class="wrapperContent">
+    <h1>Great!</h1>
+    <h2>Now take a second to reflect. Try and set a <b>personal goal</b>
+    that fits into this focus area.</h2>
+    <div class="wrapperBtn">
+      <button class="btnBack">Wait, go back</button>
+      <button class="btnNext">I'm ready</button>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperPage" id="p7">
+  <div class="contentCard selectedCard" id="focusArea">
+    <img src="img/icons/icon_searchTwo_01.png" class="icon" id="focusAreaIcon_2" alt="search icon two" />
+    <p id="faTextTwo" contenteditable="true">Establish end-to-end consistent internal 
+      communications and set consistent external expectations</p>
+  </div>
+  <div class="wrapperContent">
+    <h2>Type out your <b>personal goal</b>. <br>
+    Don't worry, you can always change it later.</h2>
+    <label for="personalGoal"></label>
+    <textarea name="personalGoal" id="personalGoal" class="inputField" cols="30" rows="10">Type something...</textarea>
+    <div class="wrapperBtn">
+      <button class="btnVideo">Learn About Goal Setting 
+        <img src="img/icons/icon_pointerLeft.png" alt="right arrow" />
+      </button>
+      <button class="btnNext">Finished!</button>
+    </div>
+  </div>
+</section>
+
+<section class="wrapperPageAlt" id="p7A">
+  <div class="wrapperContent">
+    <div class="wrapperVideo">
+      <video controls class="videoWin" id="wrpVideo_2" src="mp4/What Is Goal Setting.mp4"></video>
+      <h3>What is Goal Setting? Video</h3>
+    </div>
+    <div class="contentInfo">
+      <video src="mp4/What Is Goal Setting.mp4"></video>
+      <p>Development Goals <br>Video</p>
+    </div>
+  </div>
+  <button id="vidBack">Return</button>
+</section>
+
+<section class="wrapperPage" id="p8">
+  <h2>Okay, now let's think about <b>your skills</b>.</h1>
+  <div class="wrapperContent">
+    <div class="contentBox goal">
+      <h3>Your Goal</h3>
+      <p class="yourGoalDisplay">[Goal as inputted earlier would go here, spanning a couple lines,
+        probably three or four lines at most..]</p>
+      <img src="img/icons/icon_checkCircle_02.png" class="iconCheck" alt="checkmark icon in circle" />
+    </div>
+    <div class="contentBox skills">
+      <h3>Let's start with
+      <span class="infoClick" id="hardSkillsInfo" onmouseover="infoIn()" onmouseout="infoOut()">
+        hard skills.
+        <img src="img/icons/icon_info_01.png" class="iconInfo" alt="information icon" onmouseover="infoIn()"/>
+      </span>
+      </h3>
+
+      <!-- this is the little callout with the definiton, may want to put this somewhere else -->
+      <div class="contentInfo" id="infoBox_1">
+        <h6>Hard skills are technical abilities required for specific jobs.</h6>
+        <p>Example: Sara has excellent Python coding skills. She also has mastered data management.</p>
+      </div>
+
+      <h3>I'm good at
+        <label for="hardSkillGood1"></label>
+        <input type="text" class="inputSkill" id="hardSkillGood1">
+        &
+        <label for="hardSkillGood2"></label>
+        <input type="text" class="inputSkill" id="hardSkillGood2">
+        .
+      </h3>
+      <form action="search">
+        <label for="searchHard"></label>
+        <input type="text" class="inputSearch" id="searchHard" value="Search...">
+        <label for="submitHard"></label>
+        <input type="image" id="submitHard" src="img/icons/icon_search_01.png" alt="magnifying glass icon">
+      </form>
+      <h5>Suggested Skills</h5>
+      <div class="wrapperSkills" id="hardSkills">
+        <button class="btnSkill">layout design</button>
+        <button class="btnSkill">illustration</button>
+        <button class="btnSkill">typography</button>
+        <button class="btnSkill">timing</button>
+        <button class="btnSkill">secondary action</button>
+        <button class="btnSkill">movement</button>
+      </div>
+    </div>
+  </div>
+  <button class="btnNext">Next</button>
+</section>
+
+<section class="wrapperPage" id="p9">
+  <div class="wrapperContent">
+    <div class="contentBox goal">
+      <h3>Your Goal</h3>
+      <p class="yourGoalDisplay">[Goal as inputted earlier would go here, spanning a couple lines,
+        probably three or four lines at most..]</p>
+      <img src="img/icons/icon_checkCircle_02.png" class="iconCheck" alt="checkmark icon in circle" />
+    </div>
+    <div class="contentBox skills">
+      <h3>Let's continue with
+      <span class="infoClick" id="hardSkillsInfo" onmouseover="infoIn()" onmouseout="infoOut()">
+        hard skills.
+        <img src="img/icons/icon_info_01.png" class="iconInfo" alt="information icon" onmouseover="infoIn()"/>
+        </span>
+      </h3>
+
+      <!-- this is the little callout with the definiton, may want to put this somewhere else -->
+      <div class="contentInfo" id="infoBox_2">
+        <h6>Hard skills are technical abilities required for specific jobs.</h6>
+        <p>Example: Sara has excellent Python coding skills. She also has mastered data management.</p>
+      </div>
+
+      <h3>I'd like to improve on
+        <label for="hardSkillBad1"></label>
+        <input type="text" class="inputSkill" id="hardSkillBad1">
+        &
+        <label for="hardSkillBad2"></label>
+        <input type="text" class="inputSkill" id="hardSkillBad2">.
+      </h3>
+      <form action="search">
+        <label for="searchHard"></label>
+        <input type="text" class="inputSearch" id="searchHard" value="Search...">
+        <label for="submitHard"></label>
+        <input type="image" id="submitHard" src="img/icons/icon_search_01.png" alt="magnifying glass icon">
+      </form>
+      <h5>Suggested Skills</h5>
+      <div class="wrapperSkills" id="hardSkills">
+        <button class="btnSkill">layout design</button>
+        <button class="btnSkill">illustration</button>
+        <button class="btnSkill">typography</button>
+        <button class="btnSkill">timing</button>
+        <button class="btnSkill">secondary action</button>
+        <button class="btnSkill">movement</button>
+      </div>
+    </div>
+  </div>
+  <button class="btnNext">Next</button>
+</section>
+
+<section class="wrapperPage" id="p10">
+  <div class="wrapperContent">
+    <div class="contentBox goal">
+      <h3>Your Goal</h3>
+      <p class="yourGoalDisplay">[Goal as inputted earlier would go here, spanning a couple lines,
+        probably three or four lines at most..]</p>
+      <img src="img/icons/icon_checkCircle_02.png" class="iconCheck" alt="checkmark icon in circle" />
+    </div>
+    <div class="contentBox skills">
+      <h3>Now, onto your
+      <span class="infoClick" id="softSkillsInfo" onmouseover="infoIn()" onmouseout="infoOut()">
+        soft skills.
+        <img src="img/icons/icon_info_01.png" class="iconInfo" alt="information icon" onmouseover="infoIn()"/>
+        </span>
+      </h3>
+
+      <!-- this is the little callout with the definiton, may want to put this somewhere else -->
+      <div class="contentInfo" id="infoBox_3">
+        <h6>Soft skills can be used in any job, generally related to communication and work style.</h6>
+        <p>Example: Dev is an excellent communicator. He also has strong problem-solving abilities.</p>
+      </div>
+
+      <h3>I'm good at
+        <label for="softSkillGood1"></label>
+        <input type="text" class="inputSkill" id="softSkillGood1">
+        &
+        <label for="softSkillGood2"></label>
+        <input type="text" class="inputSkill" id="softSkillGood2">.
+      </h3>
+      <form action="search">
+        <label for="searchSoft"></label>
+        <input type="text" class="inputSearch" id="searchSoft" value="Search...">
+        <label for="submitSoft"></label>
+        <input type="image" id="submitSoft" src="img/icons/icon_search_01.png" alt="magnifying glass icon">
+      </form>
+      <h5>Suggested Skills</h5>
+      <div class="wrapperSkills" id="softSkills">
+        <button class="btnSkill">communication</button>
+        <button class="btnSkill">listening</button>
+        <button class="btnSkill">conflict resolution</button>
+        <button class="btnSkill">creativity</button>
+        <button class="btnSkill">time management</button>
+        <button class="btnSkill">collaboration</button>
+      </div>
+    </div>
+  </div>
+  <button class="btnNext">Next</button>
+</section>
+
+<section class="wrapperPage" id="p11">
+  <div class="wrapperContent">
+    <div class="contentBox goal">
+      <h3>Your Goal</h3>
+      <p class="yourGoalDisplay">[Goal as inputted earlier would go here, spanning a couple lines,
+        probably three or four lines at most..]</p>
+      <img src="img/icons/icon_checkCircle_02.png" class="iconCheck" alt="checkmark icon in circle" />
+    </div>
+    <div class="contentBox skills">
+      <h3>Let's continue with
+      <span class="infoClick" id="softSkillsInfo" onmouseover="infoIn()" onmouseout="infoOut()">
+        soft skills.
+        <img src="img/icons/icon_info_01.png" class="iconInfo" alt="information icon" onmouseover="infoIn()"/>
+        </span>
+      </h3>
+
+      <!-- this is the little callout with the definiton, may want to put this somewhere else -->
+      <div class="contentInfo" id="infoBox_4">
+        <h6>Soft skills can be used in any job, generally related to communication and work style.</h6>
+        <p>Example: Dev is an excellent communicator. He also has strong problem-solving abilities.</p>
+      </div>
+
+      <h3>I'd like to improve on
+        <label for="softSkillBad1"></label>
+        <input type="text" class="inputSkill" id="softSkillBad1">
+        &
+        <label for="softSkillBad2"></label>
+        <input type="text" class="inputSkill" id="softSkillBad2">.
+      </h3>
+      <form action="search">
+        <label for="searchSoft"></label>
+        <input type="text" class="inputSearch" id="searchSoft" value="Search...">
+        <label for="submitSoft"></label>
+        <input type="image" id="submitSoft" src="img/icons/icon_search_01.png" alt="magnifying glass icon">
+      </form>
+      <h5>Suggested Skills</h5>
+      <div class="wrapperSkills" id="softSkills">
+        <button class="btnSkill">communication</button>
+        <button class="btnSkill">listening</button>
+        <button class="btnSkill">conflict resolution</button>
+        <button class="btnSkill">creativity</button>
+        <button class="btnSkill">time management</button>
+        <button class="btnSkill">collaboration</button>
+      </div>
+    </div>
+  </div>
+  <button class="btnNext">Next</button>
+</section>
+
+<section class="wrapperPage" id="p12">
+  <div class="wrapperContent">
+    <div class="contentBox goal">
+      <h3>Your Goal</h3>
+      <p class="yourGoalDisplay">[Goal as inputted earlier would go here, spanning a couple lines,
+        probably three or four lines at most..]</p>
+      <img src="img/icons/icon_checkCircle_02.png" class="iconCheck" alt="checkmark icon in circle" />
+    </div>
+    <div class="contentBox skills">
+      <h3>Here's a summary of your skills.</h3>
+      
+      <div class="wrapperText">
+        <h3>
+          <b>Hard skills: </b>
+          I'm good at
+          <button class="btnSkill" id="hardSkillGoodDisplay1">hard skill</button>
+          &
+          <button class="btnSkill" id="hardSkillGoodDisplay2">hard skill</button>
+          .
+        </h3>
+        <h3>
+          I'd like to improve on 
+          <button class="btnSkill" id="hardSkillBadDisplay1">hard skill</button>
+          &
+          <button class="btnSkill" id="hardSkillBadDisplay2">hard skill</button>
+          .
+        </h3>
+      </div>
+
+      <div class="wrapperText">
+        <h3>
+          <b>Soft skills: </b>
+          I'm good at
+          <button class="btnSkill" id="softSkillGoodDisplay1">soft skill</button>
+          &
+          <button class="btnSkill" id="softSkillGoodDisplay2">soft skill</button>
+          .
+        </h3>
+        <h3>
+          I'd like to improve on 
+          <button class="btnSkill" id="softSkillBadDisplay1">soft skill</button>
+          &
+          <button class="btnSkill" id="softSkillBadDisplay2">soft skill</button>
+          .
+        </h3>
+      </div>
+
+    </div>
+  </div>
+  <div class="wrapperBtn">
+    <button class="btnChange" id="btnChangeSkills">Make Changes</button>
+    <button class="btnNext">Next</button>
+  </div>
+</section>
+
+<section class="wrapperPage" id="p13">
+  <h1>Great job!</h1>
+  <h2>Alright, now let's identify specific actions to strengthen your skills.
+  Ready to start?</h2>
+</section>
+
+<section class="wrapperPage" id="p14">
+  <h2>I'll work on these hard and soft skills by...</h2>
+  <div class="wrapperContent">
+
+    <div class="wrapperSkillsCard">
+      <div class="skillCard">
+        <button class="btnSkill" id="hardSkillBadCard1">hard skill</button>
+      </div>
+      <div class="skillsCard">
+        <div class="iconCircle">1</div>
+        <textarea name="hardSkill1Improve1" id="hardSkill1Improve1" cols="30" rows="10">This could be a task or project you could work on…</textarea>
+        <div class="iconCircle">2</div>
+        <textarea name="hardSkill1Improve2" id="hardSkill1Improve2" cols="30" rows="10">Or a resource or class you could seek out…</textarea>
+      </div>
+    </div>
+
+    <div class="wrapperSkillsCard">
+      <div class="skillCard">
+        <button class="btnSkill" id="hardSkillBadCard2">hard skill</button>
+      </div>
+      <div class="skillsCard">
+        <div class="iconCircle">1</div>
+        <textarea name="hardSkill2Improve1" id="hardSkill2Improve1" cols="30" rows="10">Edit improvement task in these boxes</textarea>
+        <div class="iconCircle">2</div>
+        <textarea name="hardSkill2Improve2" id="hardSkill2Improve2" cols="30" rows="10">Edit improvement task in these boxes</textarea>
+      </div>
+    </div>
+
+      <div class="wrapperSkillsCard">
+        <div class="skillCard">
+          <button class="btnSkill" id="softSkillBadCard1">soft skill</button>
+        </div>
+        <div class="skillsCard">
+          <div class="iconCircle">1</div>
+          <textarea name="softSkill1Improve1" id="softSkill1Improve1" cols="30" rows="10">Edit improvement task in these boxes</textarea>
+          <div class="iconCircle">2</div>
+          <textarea name="softSkill1Improve2" id="softSkill1Improve2" cols="30" rows="10">Edit improvement task in these boxes</textarea>
+        </div>
+      </div>
+
+      <div class="wrapperSkillsCard">
+        <div class="skillCard">
+         <button class="btnSkill" id="softSkillBadCard2">soft skill</button>
+        </div>
+        <div class="skillsCard">
+          <div class="iconCircle">1</div>
+          <textarea name="softSkill2Improve1" id="softSkill2Improve1" cols="30" rows="10">Edit improvement task in these boxes</textarea>
+          <div class="iconCircle">2</div>
+          <textarea name="softSkill2Improve2" id="softSkill2Improve2" cols="30" rows="10">Edit improvement task in these boxes</textarea>
+        </div>
+      </div>
+
+  </div>
+  <button class="btnNext">All Done</button>
+</section>
+
+
+<section class="wrapperPage" id="p15">
+  <h2>Here's a summary of how you plan to grow.</h2>
+
+  <div class="wrapperContent">
+
+    <div class="wrapperSkillsCard">
+      <div class="skillCard">
+        <button class="btnSkill" id="hardSkillBadCardTwo1">hard skill</button>
+      </div>
+      <div class="skillsCard">
+        <div class="iconCircle">1</div>
+        <p id="hardSkill1Improve1Display">Improvement task goes here, probably two or three lines at most.</p>
+        <div class="iconCircle">2</div>
+        <p id="hardSkill1Improve2Display">Improvement task goes here, probably two or three lines at most.</p>
+      </div>
+    </div>
+
+    <div class="wrapperSkillsCard">
+      <div class="skillCard">
+        <button class="btnSkill" id="hardSkillBadCardTwo2">hard skill</button>
+      </div>
+      <div class="skillsCard">
+        <div class="iconCircle">1</div>
+        <p id="hardSkill2Improve1Display">Improvement task goes here, probably two or three lines at most.</p>
+        <div class="iconCircle">2</div>
+        <p id="hardSkill2Improve2Display">Improvement task goes here, probably two or three lines at most.</p>
+      </div>
+    </div>
+
+      <div class="wrapperSkillsCard">
+        <div class="skillCard">
+          <button class="btnSkill" id="softSkillBadCardTwo1">soft skill</button>
+        </div>
+        <div class="skillsCard">
+          <div class="iconCircle">1</div>
+          <p id="softSkill1Improve1Display">Improvement task goes here, probably two or three lines at most.</p>
+          <div class="iconCircle">2</div>
+          <p id="softSkill1Improve2Display">Improvement task goes here, probably two or three lines at most.</p>
+        </div>
+      </div>
+
+      <div class="wrapperSkillsCard">
+        <div class="skillCard">
+          <button class="btnSkill" id="softSkillBadCardTwo2">soft skill</button>
+        </div>
+        <div class="skillsCard">
+          <div class="iconCircle">1</div>
+          <p id="softSkill2Improve1Display">Improvement task goes here, probably two or three lines at most.</p>
+          <div class="iconCircle">2</div>
+          <p id="softSkill2Improve2Display">Improvement task goes here, probably two or three lines at most.</textarea>
+        </div>
+      </div>
+
+  </div>
+
+  <div class="wrapperBtn">
+    <button class="btnBack">Make changes</button>
+    <button class="btnNext" id="tlNext">Looks good</button>
+  </div>
+
+</section>
+
+<section class="wrapperPage" id="p16">
+  <h1>Congrats, you have a plan!</h1>
+  <h2>Scheduling check-ins are a great way to track your progress.</h2>
+
+  <div class="wrapperTimeline">
+
+    <div class="timelineEnd">
+      <p id="startDate">Today</p>
+      <div class="timelineDot"></div>
+    </div>
+
+    <div class="timelineCheckIn">
+      <p id="checkOne">Check-In</p>
+      <img src="img/icons/icon_downArrow_01.png" class="iconSmall" alt="down arrow" />
+      <div class="timelineIcon">1</div>
+    </div>
+
+    <div class="timelineCheckIn">
+      <p id="checkTwo">Check-In</p>
+      <img src="img/icons/icon_downArrow_01.png" class="iconSmall" alt="down arrow" />
+      <div class="timelineIcon">2</div>
+    </div>
+
+    <div class="timelineEnd">
+      <p id="endDate">[Provided <br>Deadline]</p>
+      <div class="timelineDot"></div>
+    </div>
+
+    <div class="timelineLine" id="tl"></div>
+
+  </div>
+
+  <div class="wrapperBtn">
+    <button class="btnVideo">Learn About Check-Ins 
+      <img src="img/icons/icon_pointerLeft.png" alt="right arrow" />
+    </button>
+    <button class="btnNext">Let's Do It!</button>
+  </div>
+
+</section>
+
+<section class="wrapperPage" id="p17">
+  <div class="wrapperCal" id="wrapperCal">
+    <div class="controls">
+        <button onclick="previousMonth()"> 
+          <img src="img/icons/icon_orangeArrowLeft_01.png" alt="left orange arrow" /> 
+        </button>
+        <p id="current-month">January</p>
+        <button onclick="nextMonth()">
+          <img src="img/icons/icon_orangeArrowRight_01.png" alt="right orange arrow" />
+        </button>
+    </div>
+    <div class="calendar" id="calendar"> </div>
+    <div class="weekDayNames">
+      <p>S</p>
+      <p>M</p>
+      <p>T</p>
+      <p>W</p>
+      <p>T</p>
+      <p>F</p>
+      <p>S</p>
+    </div>
+  </div>
+
+  <div class="wrapperContent">
+    <h1>Set a couple of dates to check in on your goal.</h1>
+    <h2>This could be on your own or in a meeting with your manager.</h2>
+    <div class="wrapperDate">
+      <label for="checkOneInput">Check-in 1</label>
+      <input type="date" id="checkOneInput" class="inputDate">
+    </div>
+    <div class="wrapperDate">  
+      <label for="checkTwoInput">Check-in 2</label>
+      <input type="date" id="checkTwoInput" class="inputDate">
+    </div>
+    <div class="wrapperDate">  
+      <label for="deadlineInput">Deadline</label>
+      <input type="date" id="deadlineInput" class="inputDate" value="2022-11-15">
+    </div>
+
+  </div>
+  <button class="btnNext">Looks Good</button>
+</section>
+
+<section class="wrapperPage" id="p18">
+  <h1>Let's <b>review</b></h1>
+  <div class="wrapperContent">
+
+    <div class="contentCard selectedCard" id="focusArea">
+      <img src="img/icons/icon_searchTwo_01.png" class="icon" id="focusAreaIcon_3" alt="search icon two" />
+      <p id="faTextThree" contenteditable="true">Establish end-to-end consistent internal 
+        communications and set consistent external expectations</p>
+    </div>
+
+    <div class="contentBox goal" id="yourGoal">
+      <img src="img/icons/icon_edit_01.png" class="editIcon" alt="edit icon" />
+      <h3>Your Goal</h3>
+      <p class="yourGoalDisplay">[Goal as inputted earlier would go here, spanning a couple lines,
+        probably three or four lines at most..]</p>
+      <img src="img/icons/icon_checkCircle_02.png" class="iconCheck" alt="checkmark icon in circle" />
+    </div>
+
+    <div class="contentBox" id="yourSkills">
+      <img src="img/icons/icon_edit_01.png" class="editIcon" alt="edit icon" />
+      <h3>Your Skills</h3>
+      
+      <form id="improveForm">
+        <textarea class="improveTaskPreview" readonly>
+          <!-- empty for now, but this is where the improvement tasks will show up -->
+        </textarea>
+      </form>
+
+      <div class="wrapperRow">
+        <button class="btnSkill" id="hardSkillBadSummary1">hard skill</button>
+        <button class="btnCircle" id="hardSkill1Improve1Btn">1</button>
+        <button class="btnCircle" id="hardSkill1Improve2Btn">2</button>
+      </div>
+
+      <div class="wrapperRow">
+        <button class="btnSkill" id="hardSkillBadSummary2">hard skill</button>
+        <button class="btnCircle" id="hardSkill2Improve1Btn">1</button>
+        <button class="btnCircle" id="hardSkill2Improve2Btn">2</button>
+      </div>
+
+      <div class="wrapperRow">
+        <button class="btnSkill" id="softSkillBadSummary1">soft skill</button>
+        <button class="btnCircle" id="softSkill1Improve1Btn">1</button>
+        <button class="btnCircle" id="softSkill1Improve2Btn">2</button>
+      </div>
+
+      <div class="wrapperRow">
+        <button class="btnSkill" id="softSkillBadSummary2">soft skill</button>
+        <button class="btnCircle" id="softSkill2Improve1Btn">1</button>
+        <button class="btnCircle" id="softSkill2Improve2Btn">2</button>
+      </div>
+      
+    </div>
+
+    <div class="contentBox" id="yourCheckIns">
+      <img src="img/icons/icon_edit_01.png" class="editIcon" alt="edit icon" />
+      <h3>Your Check-ins</h3>
+
+      <div class="wrapperRow">
+        <img src="img/icons/icon_checkCircle_01.png" class="icon" alt="checkmark icon in circle" />
+        <input type="date" id="checkOneDisplay" class="inputDate">
+      </div>
+
+      <div class="wrapperRow">
+        <img src="img/icons/icon_checkCircle_01.png" class="icon" alt="checkmark icon in circle" />
+        <input type="date" id="checkTwoDisplay" class="inputDate">
+      </div>
+      
+      <div class="wrapperRow">
+        <img src="img/icons/icon_checkCircle_01.png" class="icon" alt="checkmark icon in circle" />
+        <input type="date" id="deadlineDisplay" class="inputDate">
+      </div>
+
+    </div>
+
+  </div>
+  <button class="btnNext">Submit</button>
+</section>
+
+<section class="wrapperPage" id="p19">
+  <h1>You're all set!</h1>
+  <div class="wrapperContent">
+    <div class="contentCard">
+      <h3>Here's Your Goals Sheet</h3>
+      <img src="img/icons/icon_download_01.png" class="icon" alt="download icon" />
+      <a href="img/docs/Template_Ind_Dev_Plan.doc" download="IDP">
+      <button class="btnDownload">Download</button>
+      </a>
+    </div>
+    <div class="contentCard">
+      <h3>Ready to Learn More?</h3>
+      <p>Check Out Our Development Conversations Video</p>
+      <a href="http://www.tivian.com/us/" target="_blank" style="text-decoration:none;">
+      <div class="wrapperIcon">
+        <img src="img/icons/icon_video_01.png" class="icon" alt="video icon" />
+        <h3>Click to Watch
+          <img src="img/icons/icon_pointerLeft.png" alt="right pointer" class="iconSmall">
+        </h3>
+      </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script src="js/lib/jquery-3.4.1.min.js"></script>
+<script src="js/comp_lb.js"></script>
+<script src="js/comp_joe.js"></script>
+<!-- <script src="css/calc-style.js"></script> -->
+
+
+</body>
+
+</html>
