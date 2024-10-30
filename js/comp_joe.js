@@ -94,37 +94,37 @@ document.getElementById('focusCard_3').addEventListener('mouseover', onHover_3);
 document.getElementById('focusCard_3').addEventListener('mouseout', offHover_3);
 
 function onHover_1() {
-    $("#focus_1").attr('src', 'img/icons/icon_searchOne_01.png');
+    $("#focus_1").attr('src', 'https://i.ibb.co/0YbhM8M/icon-search-One-01.png');
     document.getElementById("focusOne_color").style.color = "white";
     document.getElementById("focusCard_1").style.backgroundColor = "#8876de";
 }
 
 function offHover_1() {
-    $("#focus_1").attr('src', 'img/icons/icon_searchOne_02.png');
+    $("#focus_1").attr('src', 'https://i.ibb.co/ZmG1vD7/icon-search-One-02.png');
     document.getElementById("focusOne_color").style.color = "#828282";
     document.getElementById("focusCard_1").style.backgroundColor = "white";
 }
 
 function onHover_2() {
-    $("#focus_2").attr('src', 'img/icons/icon_searchTwo_01.png');
+    $("#focus_2").attr('src', 'https://i.ibb.co/tx7T2Mh/icon-search-Two-01.png');
     document.getElementById("focusTwo_color").style.color = "white";
     document.getElementById("focusCard_2").style.backgroundColor = "#8876de";
 }
 
 function offHover_2() {
-    $("#focus_2").attr('src', 'img/icons/icon_searchTwo_02.png');
+    $("#focus_2").attr('src', 'https://i.ibb.co/ySZ343v/icon-search-Two-02.png');
     document.getElementById("focusTwo_color").style.color = "#828282";
     document.getElementById("focusCard_2").style.backgroundColor = "white";
 }
 
 function onHover_3() {
-    $("#focus_3").attr('src', 'img/icons/icon_searchThree_01.png');
+    $("#focus_3").attr('src', 'https://i.ibb.co/hVV31s7/icon-search-Three-01.png');
     document.getElementById("focusThree_color").style.color = "white";
     document.getElementById("focusCard_3").style.backgroundColor = "#8876de";
 }
 
 function offHover_3() {
-    $("#focus_3").attr('src', 'img/icons/icon_searchThree_02.png');
+    $("#focus_3").attr('src', 'https://i.ibb.co/fY8yvRX/icon-search-Three-02.png');
     document.getElementById("focusThree_color").style.color = "#828282";
     document.getElementById("focusCard_3").style.backgroundColor = "white";
 }
@@ -147,65 +147,65 @@ document.addEventListener('click', function(e) {
     var put_2 = document.getElementById("faTextTwo");
     var put_3 = document.getElementById("faTextThree");
     if (e.target.matches('#focusCard_1, #focus_1, #focusOne_color')) {
-        $("#focus_1").attr('src', 'img/icons/icon_searchOne_01.png');
+        $("#focus_1").attr('src', 'https://i.ibb.co/0YbhM8M/icon-search-One-01.png');
         document.getElementById("focusOne_color").style.color = "white";
         document.getElementById("focusCard_1").style.background = "#8876de";
-        $("#focus_2").attr('src', 'img/icons/icon_searchTwo_02.png');
+        $("#focus_2").attr('src', 'https://i.ibb.co/ySZ343v/icon-search-Two-02.png');
         document.getElementById("focusTwo_color").style.color = "#828282";
         document.getElementById("focusCard_2").style.background = "white";
         document.getElementById('focusCard_2').addEventListener('mouseout', offHover_2);
-        $("#focus_3").attr('src', 'img/icons/icon_searchThree_02.png');
+        $("#focus_3").attr('src', 'https://i.ibb.co/fY8yvRX/icon-search-Three-02.png');
         document.getElementById("focusThree_color").style.color = "#828282";
         document.getElementById("focusCard_3").style.background = "white";
         document.getElementById('focusCard_3').addEventListener('mouseout', offHover_3);
         removeMouseOff_1();
         //changing focusArea icons to selection
-        $("#focusAreaIcon_1").attr('src', 'img/icons/icon_searchOne_01.png');
-        $("#focusAreaIcon_2").attr('src', 'img/icons/icon_searchOne_01.png');
-        $("#focusAreaIcon_3").attr('src', 'img/icons/icon_searchOne_01.png');
+        $("#focusAreaIcon_1").attr('src', 'https://i.ibb.co/0YbhM8M/icon-search-One-01.png');
+        $("#focusAreaIcon_2").attr('src', 'https://i.ibb.co/0YbhM8M/icon-search-One-01.png');
+        $("#focusAreaIcon_3").attr('src', 'https://i.ibb.co/0YbhM8M/icon-search-One-01.png');
         //editable text
         var get_1 = 'Fully capture client brand across visuals, content, and communications';
         put_1.innerHTML = get_1;
         put_2.innerHTML = get_1;
         put_3.innerHTML = get_1;
     } else if (e.target.matches('#focusCard_2, #focus_2, #focusTwo_color')) {
-        $("#focus_2").attr('src', 'img/icons/icon_searchTwo_01.png');
+        $("#focus_2").attr('src', 'https://i.ibb.co/tx7T2Mh/icon-search-Two-01.png');
         document.getElementById("focusTwo_color").style.color = "white";
         document.getElementById("focusCard_2").style.background = "#8876de";
-        $("#focus_1").attr('src', 'img/icons/icon_searchOne_02.png');
+        $("#focus_1").attr('src', 'https://i.ibb.co/ZmG1vD7/icon-search-One-02.png');
         document.getElementById("focusOne_color").style.color = "#828282";
         document.getElementById("focusCard_1").style.background = "white";
         document.getElementById('focusCard_1').addEventListener('mouseout', offHover_1);
-        $("#focus_3").attr('src', 'img/icons/icon_searchThree_02.png');
+        $("#focus_3").attr('src', 'https://i.ibb.co/fY8yvRX/icon-search-Three-02.png');
         document.getElementById("focusThree_color").style.color = "#828282";
         document.getElementById("focusCard_3").style.background = "white";
         document.getElementById('focusCard_3').addEventListener('mouseout', offHover_3);
         removeMouseOff_2();
         //changing focusArea icons to selection
-        $("#focusAreaIcon_1").attr('src', 'img/icons/icon_searchTwo_01.png');
-        $("#focusAreaIcon_2").attr('src', 'img/icons/icon_searchTwo_01.png');
-        $("#focusAreaIcon_3").attr('src', 'img/icons/icon_searchTwo_01.png');
+        $("#focusAreaIcon_1").attr('src', 'https://i.ibb.co/tx7T2Mh/icon-search-Two-01.png');
+        $("#focusAreaIcon_2").attr('src', 'https://i.ibb.co/tx7T2Mh/icon-search-Two-01.png');
+        $("#focusAreaIcon_3").attr('src', 'https://i.ibb.co/tx7T2Mh/icon-search-Two-01.png');
         var get_2 = 'Establish end-to-end consistent internal communications and set consistent external expectations';
         put_1.innerHTML = get_2;
         put_2.innerHTML = get_2;
         put_3.innerHTML = get_2;
     } else if (e.target.matches('#focusCard_3, #focus_3, #focusThree_color')) {
-        $("#focus_3").attr('src', 'img/icons/icon_searchThree_01.png');
+        $("#focus_3").attr('src', 'https://i.ibb.co/hVV31s7/icon-search-Three-01.png');
         document.getElementById("focusThree_color").style.color = "white";
         document.getElementById("focusCard_3").style.background = "#8876de";
-        $("#focus_2").attr('src', 'img/icons/icon_searchTwo_02.png');
+        $("#focus_2").attr('src', 'https://i.ibb.co/ySZ343v/icon-search-Two-02.png');
         document.getElementById("focusTwo_color").style.color = "#828282";
         document.getElementById("focusCard_2").style.background = "white";
         document.getElementById('focusCard_2').addEventListener('mouseout', offHover_2);
-        $("#focus_1").attr('src', 'img/icons/icon_searchOne_02.png');
+        $("#focus_1").attr('src', 'https://i.ibb.co/ZmG1vD7/icon-search-One-02.png');
         document.getElementById("focusOne_color").style.color = "#828282";
         document.getElementById("focusCard_1").style.background = "white";
         document.getElementById('focusCard_1').addEventListener('mouseout', offHover_1);
         removeMouseOff_3();
         //changing focusArea icons to selection
-        $("#focusAreaIcon_1").attr('src', 'img/icons/icon_searchThree_01.png');
-        $("#focusAreaIcon_2").attr('src', 'img/icons/icon_searchThree_01.png');
-        $("#focusAreaIcon_3").attr('src', 'img/icons/icon_searchThree_01.png');
+        $("#focusAreaIcon_1").attr('src', 'https://i.ibb.co/hVV31s7/icon-search-Three-01.png');
+        $("#focusAreaIcon_2").attr('src', 'https://i.ibb.co/hVV31s7/icon-search-Three-01.png');
+        $("#focusAreaIcon_3").attr('src', 'https://i.ibb.co/hVV31s7/icon-search-Three-01.png');
         var get_3 = 'Set ourselves as the leader in employee communications and embody that internally';
         put_1.innerHTML = get_3;
         put_2.innerHTML = get_3;

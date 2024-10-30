@@ -805,7 +805,7 @@ for (i=0; i<editButtons.length; i++){
     var clickedBtn = e.target;
     var parentCard = e.target.parentElement;
     if (editSummary == false){
-      clickedBtn.src = "img/icons/icon_check_03.png";
+      clickedBtn.src = "https://i.ibb.co/KmbmW12/icon-check-03.png";
       parentCard.style.width = "268px";
       parentCard.style.height = "335px";
       editSummary = true;
@@ -821,7 +821,7 @@ for (i=0; i<editButtons.length; i++){
       }
     }
     else if (editSummary == true){
-      clickedBtn.src = "img/icons/icon_edit_01.png";
+      clickedBtn.src = "https://i.ibb.co/MGJ3Byk/icon-edit-01.png";
       editSummary = false;
       parentCard.style.width = "254.6px";
       parentCard.style.height = "312.33px";
@@ -1362,7 +1362,7 @@ document.onkeydown = function(e){
                                             wholePage.style.fontFamily = "Comic Sans MS, Comic Sans, cursive";
                                             var images = document.querySelectorAll('img');
                                             for (i=0; i<images.length; i++){
-                                              images[i].src = "img/icons/icon_unicorn_01.png";
+                                              images[i].src = "https://i.ibb.co/bsQ9NM5/icon-unicorn-01.png";
                                             }
                                           }
                                         }

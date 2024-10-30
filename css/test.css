@@ -513,7 +513,7 @@ b {
   -moz-border-radius: 10.05px;
   ms-border-radius: 10.05px;
   -o-border-radius: 10.05px;
-  background-image: url("img/icon_person_01.png");
+  background-image: url("https://i.ibb.co/D7TXMGC/icon-person-01.png");
   background-size: 16.75px 16.75px;
   background-position: 278.05px 17.42px;
   background-repeat: no-repeat;
@@ -523,7 +523,7 @@ b {
 
 .inputPsn:active,
 .inputPsn:focus {
-  background-image: url("img/icon_person_02.png");
+  background-image: url("https://i.ibb.co/4SSLL9x/icon-person-02.png");
 }
 
 .inputDd {
@@ -538,7 +538,7 @@ b {
   height: 50.92px;
   background-color: white;
   padding-left: 21.44px;
-  background-image: url("img/icon_downCarrot_01.png");
+  background-image: url("https://i.ibb.co/WyCrRPj/icon-down-Carrot-01.png");
   background-repeat: no-repeat;
   background-size: 43.55px 50.92px;
   background-position: 269.34px;
